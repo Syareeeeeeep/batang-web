@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", sans-serif;
+        }
+        body{
+            background: url(yaitu.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 1200px;
+        }
+        @keyframes apa{
+            0%{
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            100%{
+                transform: translateY(0);
+                opacity: 100%;
+            }
+        }
+        @keyframes apalah{
+            0%{
+                opacity: 0;
+                transform: translateX(-300px);
+            }
+            100%{
+                opacity: 100%;
+                transform: translateX(0);
+            }
+        }
+        @keyframes apalahkewalik{
+            0%{
+                opacity: 0;
+                transform: translateX(300px);
+            }
+            100%{
+                opacity: 100%;
+                transform: translateX(0);
+            }
+        }
+        nav {
+            position: fixed;
+            z-index: 999;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: transparent;
+            backdrop-filter: blur(10px);
+            padding-top: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.137);
+            animation: ease-in-out apa 2s;
+        }
+        nav .logo{
+            color: #fff;
+            margin-left: 50px;
+            display: flex;
+            font-size: 25px;
+            font-weight: 700;
+        }
+        nav .logo .yaa{
+            color: rgb(255, 239, 195);
+        }
+        nav ul {
+            margin-right: 50px;
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+        nav ul li a{
+            position: relative;
+            text-decoration: none;
+            color: #fff;
+            padding: 0 2px;
+        }
+
+        nav ul li a:after{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            left: 0;
+            bottom: -2px;
+            background-color: #fff;
+            border-radius: 1px;
+            transform: scaleX(0);
+            transition: ease-in-out .3s;
+        }
+
+        nav ul li a:hover:after{
+            transform: scaleX(1);
+        }
+
+        .kota{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .kota span{
+            position: absolute;
+            top: 250px;
+            font-size: 70px;
+            font-weight: 600;
+            color: white;
+            animation: ease-out 2s apalah;
+        }
+        .kota a{
+            position: absolute;
+            top: 360px;
+            text-decoration: none;
+            color: white;
+            border: 1px solid white;
+            border-radius: 30px;
+            padding: 8px 25px;
+            font-size: 16px;
+            animation: ease-out 2s apalahkewalik;
+        }
+
+        .kota a:hover{
+            background: #ffffff25;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <div class="logo">
+                <span>My</span>
+                <span class="yaa">Web</span>
+            </div>
+            <ul>
+                <li><a href="">HOME</a></li>
+                <li><a href="">BEACHES</a></li>
+                <li><a href="">POPULAR</a></li>
+                <li><a href="">CONTANTC US</a></li>
+            </ul>
+        </nav>
+        <div class="kota">
+            <span>Batang</span>
+            <a href="">Explore</a>
+        </div>
+    </div>
+</body>
+</html>
